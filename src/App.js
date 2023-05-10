@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header.js'
+import Navigation from './components/Navigation.js'
+import Footer from './components/Footer.js'
+
+import Home from './pages/Home.js'
+import About from './pages/About.js'
+import { useState, useEffect } from 'react'
+
+
+
 
 function App() {
+  const logo = 'Porfolio'
+  const [page, setPage] = useState('home')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+    
+     < Header logo={logo} /> 
+
+     < Navigation page={page} setPage={setPage} />
+    
+      {/* {
+        page === 'home' && <Home />
+      }
+      {
+        page === 'about' && <About />
+      }
+
+      < Footer logo={logo}/> */}
+    </>
   );
 }
 

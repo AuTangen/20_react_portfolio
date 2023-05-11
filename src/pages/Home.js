@@ -1,9 +1,8 @@
+import { useState, useEffect } from 'react'
 function Home() {
     return (
-        <main>
-            <h1>Home Page</h1>
-
-          <p id="icon">&#127969;</p>  
+        <main className='home-container'>
+            <img id='titlebanner' src={require('../images/title.png')} alt="Austen Tangen - Front End Web Developer"></img>
 
           
         </main>

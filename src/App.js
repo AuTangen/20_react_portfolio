@@ -1,34 +1,41 @@
 import Header from './components/Header.js'
-import Navigation from './components/Navigation.js'
+
 import Footer from './components/Footer.js'
 
 import Home from './pages/Home.js'
 import About from './pages/About.js'
+import Portfolio from './pages/Portfolio.js'
+import Contact from './pages/Contact.js'
 import { useState, useEffect } from 'react'
 
 
 
 
 function App() {
-  const logo = 'Porfolio'
+  const title = 'Portfolio'
   const [page, setPage] = useState('home')
 
   return (
     <>
 
     
-     < Header logo={logo} /> 
+     < Header page={page} setPage={setPage} title={title} /> 
 
-     < Navigation page={page} setPage={setPage} />
-    
-      {/* {
+      
+      {
         page === 'home' && <Home />
       }
       {
         page === 'about' && <About />
       }
+      {
+        page === 'portfolio' && <Portfolio />
+      } 
+      {
+        page === 'contact' && <Contact />
+      } 
 
-      < Footer logo={logo}/> */}
+      {/* < Footer logo={logo}/>  */}
     </>
   );
 }

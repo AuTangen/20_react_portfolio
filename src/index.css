@@ -20,6 +20,9 @@ code {
     monospace;
 }
 
+.main-container {
+  margin: 5% 2%
+}
 
 header {
   display: flex;
@@ -28,13 +31,21 @@ header {
   }
 
   #main-title {
-    color:deepskyblue;
+    
     margin-left: 5%;
     white-space: nowrap;
 }
 
-.namespan {
+
+
+.navspan {
   color:lightsteelblue;
+  display: none;
+}
+
+.navspan.active {
+  
+  display: initial;
 }
 
   header nav {
@@ -54,14 +65,23 @@ header nav a.active {
 
 }
 
-#titlebanner {
+header nav a:hover {
+  opacity: 80%;
+}
+
+.title-wrap {
+  margin-top: 2%;
+  justify-content: center;
+  text-align: center;
+}
+/* #titlebanner {
   display: flex;
   size-adjust: 50%;
   
   opacity: 80%;
-  
-  
-}
+    
+} */
+
 
 .home-container {
   
@@ -76,12 +96,91 @@ header nav a.active {
     background-size: cover;
       
       
-      min-width: 450px;
+      min-width: 300px;
       background-position: bottom;
       position: relative;
       transition: max-width .4s,width .4s,height .4s;
-      
+      margin-left: 2%;
   }
+
+
+.about-wrap {
+  margin: 0 2%;
+  margin-top: 5%;
+  display: flex;
+  
+}
+
+.bio-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+}
+
+
+.titlesub {
+  font-size: 120%;
+}
+
+.prof-container {
+ display: flex;
+}
+
+
+
+.frontend-container {
+margin: 5% 7%;
+background-color: indigo;
+padding: 0 5% 2% 5%;
+border-radius: 7px;
+}
+
+
+.backend-container {
+margin: 5% 7%;
+background-color:deepskyblue;
+padding: 0 5% 2% 5%;
+border-radius: 7px;
+}
+
+li {
+  
+  list-style-type: none;
+}
+
+form {
+  
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px auto 0;
+}
+
+form h1, form h2 {
+  text-align: center;
+}
+
+form input, form button, form textarea {
+  padding: 6px 10px;
+  margin-bottom: 7px;
+}
+
+form textarea {
+  height: 100px;
+}
+
+button {
+  background-color: rgb(30, 197, 141);
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: rgb(12, 145, 100);
+  cursor: pointer;
+}
 
   @media screen and (max-width: 768px) {
 
@@ -89,7 +188,8 @@ header nav a.active {
       height: 50vh;
     width: 100%;
     min-width: 325px;
-    margin-top: 50%;
+    margin-top: 10%;
     background-position: bottom;
+    
     }
   }

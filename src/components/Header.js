@@ -21,18 +21,18 @@ const showContact = () => {
     props.setPage('contact')
 };
   
- 
+
+
 
     return (
       <header>
-        <h3 id="main-title"><span class="namespan">&lt;</span>Austen Tangen<span class="namespan">/&gt;</span></h3>
+        <h2 id="main-title">Austen | Tangen</h2>
         <nav>
-                <a className={props.page === 'home' ? 'active' : ''} onClick={(showHome)} href='#'>Home</a>
-                <a className={props.page === 'about' ? 'active' : ''} onClick={(showAbout)} href='#'>About</a>
-                <a className={props.page === 'portfolio' ? 'active' : ''} onClick={(showPortfolio)} href='#'>Portfolio</a>
-                <a className={props.page === 'contact' ? 'active' : ''} onClick={(showContact)} href='#'>Contact</a>
+                <a className={props.page === 'home' ? 'active' : ''} onClick={(showHome)} href='#'><span className={`navspan + ${props.page === 'home' ? 'active' : ''}`}>&lt;</span>Home<span class={`navspan + ${props.page === 'home' ? 'active' : ''}`}>/&gt;</span></a>
+                <a className={props.page === 'about' ? 'active' : ''} onClick={(showAbout)} href='#'><span className={`navspan + ${props.page === 'about' ? 'active' : ''}`}>&lt;</span>About<span class={`navspan + ${props.page === 'about' ? 'active' : ''}`}>/&gt;</span></a>
+                <a className={props.page === 'portfolio' ? 'active' : ''} onClick={(showPortfolio)} href='#'><span className={`navspan + ${props.page === 'portfolio' ? 'active' : ''}`}>&lt;</span>Portfolio<span class={`navspan + ${props.page === 'portfolio' ? 'active' : ''}`}>/&gt;</span></a>
+                <a className={props.page === 'contact' ? 'active' : ''} onClick={(showContact)} href='#'><span className={`navspan + ${props.page === 'contact' ? 'active' : ''}`}>&lt;</span>Contact<span class={`navspan + ${props.page === 'contact' ? 'active' : ''}`}>/&gt;</span></a>
             </nav>
-          
 
       </header>
     )
